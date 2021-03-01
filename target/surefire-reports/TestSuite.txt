@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 233.345 s <<< FAILURE! - in TestSuite
+CustomersPageLogoTest(com.crm.qa.testcases.CustomerPageTest)  Time elapsed: 10.087 s  <<< FAILURE!
+java.lang.AssertionError: 
+expected [Customers] but found [Customers
+Add new
+Export
+ ]
+	at com.crm.qa.testcases.CustomerPageTest.CustomersPageLogoTest(CustomerPageTest.java:54)
+

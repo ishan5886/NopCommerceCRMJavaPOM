@@ -1,0 +1,22 @@
+*************Jenkins Details********************************************
+
+
+Username :- desktop-1eq7h6n\intel
+Password :- GurgaoN18
+
+Account username :- ishan5886
+Password :- ishan12345
+
+Jenkins URL:- http://localhost:8080/
+
+
+
+Setting up Maven in Jenkins..........
+
+	> Login Jenkins
+	> Go to Manage Jenkins
+	> Go to Manage Plugins
+	> Click on Available tab
+ 	> Search for Maven Plugins
+	> Select all plugins starting with Maven..
+ 	> Click on Install...

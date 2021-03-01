@@ -1,0 +1,90 @@
+Push Code to Git and GitHub Repository
+
+1. Install git
+2. Create account on GitHub
+3. Create local git repository for project
+
+    > Go to project directory and open - D:\Python Programs\SeleniumPavanSDET\NopCommerce
+    > Right click and select Git Bash Here option...
+
+4. git init  -> Initialize empty git repository at project location/.git/
+5. Get Repository URL on GitHub - https://github.com/ishan5886/IshanRepository.git
+6. git remote add origin [Github Repository URL] - Connect local git repository with Github repository
+
+       > git remote add origin https://github.com/ishan5886/IshanRepository.git
+
+7. When commiting code to github repo first time need to execute 2 commands:
+
+        git config --global user.name "ishan5886"
+        git config user.email "ishan.dhaliwal@gmail.com"
+
+8. Add all code files into index/staging area(internal memory area)
+
+        git status - Status of files(commited/not committed)
+        clear  - Command to clear screen
+        git add -A  - Add files to staging area
+
+9. Commit code to git repository(local)
+        git commit -m "first commit"
+
+
+10. Push code from git(local) to github repository
+
+        git push -u origin master
+
+11. To pull latest code from github repo(if file changes are made):-
+
+        git pull
+
+12. If file changed in local git repo and to be pushed on master
+
+        git add -A
+        git commit -m "Second commit"
+        git push -u origin master
+
+
+
+--------------------------------------------JENKINS  - Using GIT--------------------------------------------------
+
+1. Launch Jenkins URL :- http://localhost:8080/
+2. Click on New Item
+3. Enter item name....Select Freestyle Project
+4. Add Description (Optional)
+5. In Source Code Management select Git
+6. Add GitHub Repository URL
+7. In Branches to build specify branch if other than master
+8. Click on Build->Add Build Step-> Execute Windows Batch Command
+9. Give name of .bat file containing pytest run commands or directly write command in it
+10. From Dashboard select Build Now
+11. Before clicking Build Now do some configurations
+
+
+*************Specify git path at Jenkins > Manage Jenkins > Global Tool Configuration > Git
+******************** Path is C:\Program Files\Git\bin[if local system]
+
+
+
+--------------------------------------------JENKINS  - Using Maven--------------------------------------------------
+
+1. Launch Jenkins URL :- http://localhost:8080/
+2. Click on New Item
+3. Enter item name....Select Maven Project
+4. Add Description (Optional)
+5. In Build click on tool configuration link
+6. Under Maven click on Add Maven.Apply and Save.
+7. Under Build -> Root POM provide the path of the pom.xml file of project(copy path from eclipse)
+8. In Goals and Options write  clean install
+9. In Post Steps select Run regardless of build result
+10. For TestNG Report Plugin goto Manage Jenkins -> Manage Plugin-> Available. Search for testNg and select TestNG Results Plugin 
+11. Restart Jenkins
+12. In the Post Build Actions select Publish TestNG option.
+13. If Crumb issue appears then "Manage Jenkins" --> "Configure Global Security" --> Under CSRF Protection" select Enable proxy
+14. Apply and Save.
+15. 
+
+
+
+
+
+
+
