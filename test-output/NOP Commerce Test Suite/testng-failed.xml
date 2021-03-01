@@ -3,6 +3,7 @@
 <suite name="Failed suite [NOP Commerce Test Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.crm.qa.ExtentReportListener.ExtentReportListener"/>
+    <listener class-name="com.crm.qa.RetryAnalyzerListener.AnnotationTransformer"/>
   </listeners>
   <test thread-count="5" name="NoP Commerce App Test Cases(failed)">
     <classes>
@@ -13,15 +14,13 @@
           <include name="CustomersPageLogoTest"/>
         </methods>
       </class> <!-- com.crm.qa.testcases.CustomerPageTest -->
-      <class name="com.crm.qa.testcases.HomePageTest">
+      <class name="com.crm.qa.testcases.AddCustomersPageTest">
         <methods>
-          <include name="clickOnCustomersMenuItem"/>
-          <include name="clickOnCustomersMenuTest"/>
-          <include name="setUp"/>
-          <include name="homePageTitleTest"/>
+          <include name="addCustomer"/>
           <include name="tearDown"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.crm.qa.testcases.HomePageTest -->
+      </class> <!-- com.crm.qa.testcases.AddCustomersPageTest -->
     </classes>
   </test> <!-- NoP Commerce App Test Cases(failed) -->
 </suite> <!-- Failed suite [NOP Commerce Test Suite] -->
