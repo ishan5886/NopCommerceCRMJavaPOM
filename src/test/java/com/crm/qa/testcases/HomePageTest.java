@@ -2,6 +2,7 @@ package com.crm.qa.testcases;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -18,6 +19,8 @@ public class HomePageTest extends TestBase {
 	HomePage homePage;
 	CustomersPage customersPage;
 	
+	Logger log = Logger.getLogger(HomePageTest.class);
+	
 	
 	public HomePageTest() {
 		super();
@@ -28,6 +31,8 @@ public class HomePageTest extends TestBase {
 	@BeforeMethod
 	public void setUp() {
 		
+		log.info("******************************Starting test case execution************************");
+		
 		initialization();
 	    loginPage  = new LoginPage();
 	    homePage = loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
@@ -37,7 +42,10 @@ public class HomePageTest extends TestBase {
 	
 
 	@Test(priority=1)
-	public void homePageTitleTest() throws InterruptedException {										
+	public void homePageTitleTest() throws InterruptedException {
+		
+		log.info("****************************** starting test case *****************************************");
+		log.info("****************************** homePageTitleTest *****************************************");
 		String homePagetitle =  homePage.verifyHomePageTitle();
 		Thread.sleep(10000);
 		Assert.assertEquals(homePagetitle, "Dashboard / nopCommerce administration");
@@ -48,6 +56,9 @@ public class HomePageTest extends TestBase {
 	@Test(priority=2)
 	public void clickOnCustomersMenuTest() throws InterruptedException {
 		
+		log.info("****************************** starting test case *****************************************");
+		log.info("****************************** clickOnCustomersMenuTest *****************************************");
+		
 		homePage.clickOnCustomersMenu();
 		Thread.sleep(10000);
 	}
@@ -55,6 +66,10 @@ public class HomePageTest extends TestBase {
 	
 	@Test(priority=3)
 	public void clickOnCustomersMenuItem() throws InterruptedException  {
+		
+		log.info("****************************** starting test case *****************************************");
+		log.info("****************************** clickOnCustomersMenuItemTest *****************************************");
+		
 		
 //		homePage.clickOnCustomersMenu();
 		Thread.sleep(10000);
@@ -67,6 +82,9 @@ public class HomePageTest extends TestBase {
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();
+		
+		log.info("****************************** Closing Browser*****************************************");
+		
 	}
 	
 	

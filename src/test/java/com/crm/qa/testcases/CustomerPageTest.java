@@ -1,6 +1,7 @@
 package com.crm.qa.testcases;
 
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,6 +14,8 @@ import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
 
 public class CustomerPageTest extends TestBase {
+	
+	Logger log = Logger.getLogger(CustomerPageTest.class);
 	
 	LoginPage loginPage;
 	HomePage homePage;
@@ -28,6 +31,8 @@ public class CustomerPageTest extends TestBase {
 	@BeforeMethod
 	public void setUp() throws InterruptedException {
 		
+		log.info("******************************Starting test case execution************************");
+		
 		initialization();
 		customersPage = new CustomersPage();
 	    loginPage  = new LoginPage();
@@ -39,7 +44,9 @@ public class CustomerPageTest extends TestBase {
 	
 
 	@Test(priority=1)
-	public void CustomersPageTitleTest() throws InterruptedException {										
+	public void CustomersPageTitleTest() throws InterruptedException {	
+		log.info("****************************** starting test case *****************************************");
+		log.info("****************************** CustomersPageTitleTest *****************************************");
 		String custPagetitle =  customersPage.verifyCustomerPageTitle();
 		Thread.sleep(10000);
 		Assert.assertEquals(custPagetitle, "Customers / nopCommerce administration");
@@ -48,7 +55,9 @@ public class CustomerPageTest extends TestBase {
 	
 
 	@Test(priority=2)
-	public void CustomersPageLogoTest() throws InterruptedException {										
+	public void CustomersPageLogoTest() throws InterruptedException {	
+		log.info("****************************** starting test case *****************************************");
+		log.info("****************************** CustomersPageLogoTest *****************************************");
 		String custPagelogo =  customersPage.verifyCustomerPageLogo();
 		Thread.sleep(10000);
 		Assert.assertEquals(custPagelogo, "Customers");
@@ -58,7 +67,8 @@ public class CustomerPageTest extends TestBase {
 	
 	@Test(priority=3)
 	public void clickOnAddNewCustomerTest() throws InterruptedException  {
-		
+		log.info("****************************** starting test case *****************************************");
+		log.info("****************************** clickOnAddNewCustomerTest *****************************************");
 		addCustomersPage = customersPage.clickOnAddNewCustomer();
 		Thread.sleep(15000);
 	}
@@ -67,6 +77,8 @@ public class CustomerPageTest extends TestBase {
 	
 	@AfterMethod
 	public void tearDown() {
+		
+		log.info("****************************** Closing Browser*****************************************");
 		driver.quit();
 	}
 	

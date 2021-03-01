@@ -83,6 +83,11 @@ Push Code to Git and GitHub Repository
 15. After Build Executed click on Build and select Test Results. Click on each case to know fail/pass reasons
 
 
+***************TO RUN JENKINS WAR FILE ....Place war file in jenkins******************************
+**********************java -jar jenkins.war --enable-future-java********************
+
+
+
 
 
 

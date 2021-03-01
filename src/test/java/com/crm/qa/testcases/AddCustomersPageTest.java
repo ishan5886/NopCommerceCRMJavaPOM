@@ -4,6 +4,7 @@ package com.crm.qa.testcases;
 import java.io.IOException;
 import java.util.Random;
 
+import org.apache.log4j.Logger;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -20,6 +21,7 @@ import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtil;
 
 public class AddCustomersPageTest extends TestBase {
+	Logger log = Logger.getLogger(AddCustomersPageTest.class);
 	
 	LoginPage loginPage;
 	HomePage homePage;
@@ -37,6 +39,8 @@ public class AddCustomersPageTest extends TestBase {
 	@BeforeMethod
 	public void setUp() throws InterruptedException {
 		
+		log.info("******************************Starting test case execution************************");
+		
 		initialization();
 		customersPage = new CustomersPage();
 	    loginPage  = new LoginPage();
@@ -48,6 +52,8 @@ public class AddCustomersPageTest extends TestBase {
 	
 	
 	 public String random_generator() {
+		 
+		 log.info("****************************** Generating Random String *****************************************");
 	    	
 	    	// create a string of all characters
 	        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -82,6 +88,8 @@ public class AddCustomersPageTest extends TestBase {
 	 
 	 @DataProvider
 	 public Object[][] getNopTestData() throws InvalidFormatException {
+		 
+		 log.info("****************************** starting Data Provider *****************************************");
 		 Object data[][] = TestUtil.getTestData(sheetName);
 		 return data;
 	 }
@@ -92,6 +100,8 @@ public class AddCustomersPageTest extends TestBase {
 	public void addCustomer(String pwd,String fn,String ln,String gen,String birthdate,String compname,
 							String mgrofvendor,String admincontentt) throws InterruptedException {
 		
+		log.info("****************************** starting test case *****************************************");
+		log.info("****************************** addCustomer *****************************************");
 		
 		String random_email = random_generator() + "@gmail.com";
 		
@@ -140,7 +150,11 @@ public class AddCustomersPageTest extends TestBase {
 	
 	@AfterMethod
 	public void tearDown() {
+		
 		driver.quit();
+		
+		log.info("****************************** Closing Browser *****************************************");
+		
 	}
 	
 	
