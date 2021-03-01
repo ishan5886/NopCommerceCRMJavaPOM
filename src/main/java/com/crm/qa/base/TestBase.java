@@ -24,6 +24,7 @@ public class TestBase {
 	public  static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
 	
+	
 	public TestBase(){
 		try {
 			prop = new Properties();
@@ -40,9 +41,11 @@ public class TestBase {
 	
 	public static void initialization(){
 		String browserName = prop.getProperty("browser");
-		
+		String chromepath = prop.getProperty("chrome_driver_path");
+		String path = System.getProperty("user.dir");
+				
 		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", "D:\\JAVA POM Naveen\\POMNaveen\\FreeCRMTest1\\chromedriver_win32\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", path+chromepath);
 			driver = new ChromeDriver(); 
 		}
 		

@@ -80,7 +80,7 @@ Push Code to Git and GitHub Repository
 12. In the Post Build Actions select Publish TestNG option.
 13. If Crumb issue appears then "Manage Jenkins" --> "Configure Global Security" --> Under CSRF Protection" select Enable proxy
 14. Apply and Save.
-15. 
+15. After Build Executed click on Build and select Test Results. Click on each case to know fail/pass reasons
 
 
 

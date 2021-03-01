@@ -5,7 +5,7 @@
     <classes>
       <class name="com.crm.qa.testcases.AddCustomersPageTest">
         <methods>
-          <include name="addCustomer" invocation-numbers="0"/>
+          <include name="addCustomer"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
