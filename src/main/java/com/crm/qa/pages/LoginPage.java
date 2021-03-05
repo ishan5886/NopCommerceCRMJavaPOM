@@ -6,6 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.crm.qa.base.TestBase;
 
+import io.qameta.allure.Step;
+
 public class LoginPage extends TestBase{
 	
 	//Page Factory - Object Repository
@@ -33,6 +35,7 @@ public class LoginPage extends TestBase{
 	}
 	
 	//Actions:
+	@Step("getting login page title method")
 	public String validateLoginPageTitle()
 	{
 		return driver.getTitle();
@@ -44,6 +47,7 @@ public class LoginPage extends TestBase{
 		
 	}
 	
+	@Step("login with username: {0} and password: {1 }")  //{0} will enter username in Allure Reports and {1} will enter password
 	public HomePage login(String em, String pwd) {
 		
 		email.clear();

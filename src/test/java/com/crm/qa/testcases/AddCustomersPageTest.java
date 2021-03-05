@@ -11,8 +11,10 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.crm.qa.AllureReportListener.AllureReportListener;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.AddCustomersPage;
 import com.crm.qa.pages.CustomersPage;
@@ -20,6 +22,7 @@ import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
 import com.crm.qa.util.TestUtil;
 
+@Listeners(AllureReportListener.class)
 public class AddCustomersPageTest extends TestBase {
 	Logger log = Logger.getLogger(AddCustomersPageTest.class);
 	

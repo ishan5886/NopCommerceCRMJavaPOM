@@ -4,7 +4,8 @@
 
 	<listeners>
 		<listener class-name="com.crm.qa.ExtentReportListener.ExtentReportListener" />
-			<listener class-name="com.crm.qa.RetryAnalyzerListener.AnnotationTransformer" />
+		<listener class-name="com.crm.qa.RetryAnalyzerListener.AnnotationTransformer" />
+		<listener class-name="com.crm.qa.AllureReportListener.AllureReportListener" />
 	</listeners>
 
 

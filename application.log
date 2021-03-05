@@ -1,15 +1,15 @@
-2021-03-01 23:39:29,865  INFO [main] LoginPageTest:30 - ******************************Starting test case execution************************
-2021-03-01 23:39:30,010 DEBUG [main] InternalLoggerFactory:89 - Using Log4J as the default logging framework
-2021-03-01 23:39:30,018 DEBUG [main] ResourceLeakDetector:129 - -Dio.netty.leakDetection.level: simple
-2021-03-01 23:39:30,021 DEBUG [main] ResourceLeakDetector:130 - -Dio.netty.leakDetection.targetRecords: 4
-2021-03-01 23:39:30,031 DEBUG [main] ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@61c4eee0
-2021-03-01 23:39:30,097 DEBUG [main] PlatformDependent:1036 - Platform: Windows
-2021-03-01 23:39:30,102 DEBUG [main] PlatformDependent0:417 - -Dio.netty.noUnsafe: false
-2021-03-01 23:39:30,105 DEBUG [main] PlatformDependent0:897 - Java version: 15
-2021-03-01 23:39:30,110 DEBUG [main] PlatformDependent0:130 - sun.misc.Unsafe.theUnsafe: available
-2021-03-01 23:39:30,111 DEBUG [main] PlatformDependent0:154 - sun.misc.Unsafe.copyMemory: available
-2021-03-01 23:39:30,113 DEBUG [main] PlatformDependent0:192 - java.nio.Buffer.address: available
-2021-03-01 23:39:30,115 DEBUG [main] PlatformDependent0:266 - direct buffer constructor: unavailable
+2021-03-05 22:34:45,053  INFO [main] LoginPageTest:37 - ******************************Starting test case execution************************
+2021-03-05 22:34:45,336 DEBUG [main] InternalLoggerFactory:89 - Using Log4J as the default logging framework
+2021-03-05 22:34:45,356 DEBUG [main] ResourceLeakDetector:129 - -Dio.netty.leakDetection.level: simple
+2021-03-05 22:34:45,357 DEBUG [main] ResourceLeakDetector:130 - -Dio.netty.leakDetection.targetRecords: 4
+2021-03-05 22:34:45,374 DEBUG [main] ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@48eb9836
+2021-03-05 22:34:45,499 DEBUG [main] PlatformDependent:1036 - Platform: Windows
+2021-03-05 22:34:45,508 DEBUG [main] PlatformDependent0:417 - -Dio.netty.noUnsafe: false
+2021-03-05 22:34:45,509 DEBUG [main] PlatformDependent0:897 - Java version: 15
+2021-03-05 22:34:45,517 DEBUG [main] PlatformDependent0:130 - sun.misc.Unsafe.theUnsafe: available
+2021-03-05 22:34:45,519 DEBUG [main] PlatformDependent0:154 - sun.misc.Unsafe.copyMemory: available
+2021-03-05 22:34:45,523 DEBUG [main] PlatformDependent0:192 - java.nio.Buffer.address: available
+2021-03-05 22:34:45,527 DEBUG [main] PlatformDependent0:266 - direct buffer constructor: unavailable
 java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
 	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
 	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:238)
@@ -30,8 +30,8 @@ java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
 	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:99)
 	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:86)
 	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:41)
-	at com.crm.qa.base.TestBase.initialization(TestBase.java:49)
-	at com.crm.qa.testcases.LoginPageTest.setup(LoginPageTest.java:32)
+	at com.crm.qa.base.TestBase.initialization(TestBase.java:58)
+	at com.crm.qa.testcases.LoginPageTest.setup(LoginPageTest.java:39)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -61,12 +61,16 @@ java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
 	at org.testng.TestNG.runSuites(TestNG.java:1069)
 	at org.testng.TestNG.run(TestNG.java:1037)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2021-03-01 23:39:30,123 DEBUG [main] PlatformDependent0:331 - java.nio.Bits.unaligned: available, true
-2021-03-01 23:39:30,126 DEBUG [main] PlatformDependent0:390 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
-java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @7d3e8655
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+2021-03-05 22:34:45,546 DEBUG [main] PlatformDependent0:331 - java.nio.Bits.unaligned: available, true
+2021-03-05 22:34:45,549 DEBUG [main] PlatformDependent0:390 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @6f79caec
 	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:385)
 	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:693)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:556)
@@ -88,8 +92,8 @@ java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent
 	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:99)
 	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:86)
 	at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:41)
-	at com.crm.qa.base.TestBase.initialization(TestBase.java:49)
-	at com.crm.qa.testcases.LoginPageTest.setup(LoginPageTest.java:32)
+	at com.crm.qa.base.TestBase.initialization(TestBase.java:58)
+	at com.crm.qa.testcases.LoginPageTest.setup(LoginPageTest.java:39)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -119,124 +123,81 @@ java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
 	at org.testng.TestNG.runSuites(TestNG.java:1069)
 	at org.testng.TestNG.run(TestNG.java:1037)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-2021-03-01 23:39:30,130 DEBUG [main] PlatformDependent0:403 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
-2021-03-01 23:39:30,130 DEBUG [main] PlatformDependent:1079 - sun.misc.Unsafe: available
-2021-03-01 23:39:30,194 DEBUG [main] PlatformDependent:1181 - maxDirectMemory: 4276092928 bytes (maybe)
-2021-03-01 23:39:30,195 DEBUG [main] PlatformDependent:1200 - -Dio.netty.tmpdir: C:\Users\InTel\AppData\Local\Temp (java.io.tmpdir)
-2021-03-01 23:39:30,195 DEBUG [main] PlatformDependent:1279 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2021-03-01 23:39:30,197 DEBUG [main] PlatformDependent:177 - -Dio.netty.maxDirectMemory: -1 bytes
-2021-03-01 23:39:30,198 DEBUG [main] PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2021-03-01 23:39:30,200 DEBUG [main] CleanerJava9:71 - java.nio.ByteBuffer.cleaner(): available
-2021-03-01 23:39:30,201 DEBUG [main] PlatformDependent:204 - -Dio.netty.noPreferDirect: false
-2021-03-01 23:39:30,215 DEBUG [main] PlatformDependent:940 - org.jctools-core.MpscChunkedArrayQueue: available
-2021-03-01 23:39:30,311 DEBUG [main] InternalThreadLocalMap:83 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2021-03-01 23:39:30,312 DEBUG [main] InternalThreadLocalMap:86 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-2021-03-01 23:39:30,660 DEBUG [main] JdkSslContext:97 - Default protocols (JDK): [TLSv1.3, TLSv1.2, TLSv1.1, TLSv1] 
-2021-03-01 23:39:30,661 DEBUG [main] JdkSslContext:98 - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
-2021-03-01 23:39:30,694 DEBUG [main] MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 8
-2021-03-01 23:39:30,708 DEBUG [main] NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
-2021-03-01 23:39:30,708 DEBUG [main] NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
-2021-03-01 23:39:30,790 DEBUG [main] PooledByteBufAllocator:154 - -Dio.netty.allocator.numHeapArenas: 8
-2021-03-01 23:39:30,790 DEBUG [main] PooledByteBufAllocator:155 - -Dio.netty.allocator.numDirectArenas: 8
-2021-03-01 23:39:30,790 DEBUG [main] PooledByteBufAllocator:157 - -Dio.netty.allocator.pageSize: 8192
-2021-03-01 23:39:30,791 DEBUG [main] PooledByteBufAllocator:162 - -Dio.netty.allocator.maxOrder: 11
-2021-03-01 23:39:30,791 DEBUG [main] PooledByteBufAllocator:166 - -Dio.netty.allocator.chunkSize: 16777216
-2021-03-01 23:39:30,792 DEBUG [main] PooledByteBufAllocator:167 - -Dio.netty.allocator.smallCacheSize: 256
-2021-03-01 23:39:30,792 DEBUG [main] PooledByteBufAllocator:168 - -Dio.netty.allocator.normalCacheSize: 64
-2021-03-01 23:39:30,792 DEBUG [main] PooledByteBufAllocator:169 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2021-03-01 23:39:30,792 DEBUG [main] PooledByteBufAllocator:170 - -Dio.netty.allocator.cacheTrimInterval: 8192
-2021-03-01 23:39:30,793 DEBUG [main] PooledByteBufAllocator:171 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
-2021-03-01 23:39:30,793 DEBUG [main] PooledByteBufAllocator:172 - -Dio.netty.allocator.useCacheForAllThreads: true
-2021-03-01 23:39:30,793 DEBUG [main] PooledByteBufAllocator:173 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
-2021-03-01 23:39:30,811 DEBUG [main] ByteBufUtil:87 - -Dio.netty.allocator.type: pooled
-2021-03-01 23:39:30,812 DEBUG [main] ByteBufUtil:96 - -Dio.netty.threadLocalDirectBufferSize: 0
-2021-03-01 23:39:30,812 DEBUG [main] ByteBufUtil:99 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
-2021-03-01 23:39:31,832 DEBUG [Forwarding newSession on session null to remote] DefaultChannelId:79 - -Dio.netty.processId: 7960 (auto-detected)
-2021-03-01 23:39:31,839 DEBUG [Forwarding newSession on session null to remote] NetUtil:135 - -Djava.net.preferIPv4Stack: false
-2021-03-01 23:39:31,839 DEBUG [Forwarding newSession on session null to remote] NetUtil:136 - -Djava.net.preferIPv6Addresses: false
-2021-03-01 23:39:31,863 DEBUG [Forwarding newSession on session null to remote] NetUtilInitializations:129 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
-2021-03-01 23:39:31,865 DEBUG [Forwarding newSession on session null to remote] NetUtil:187 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
-2021-03-01 23:39:31,946 DEBUG [Forwarding newSession on session null to remote] DefaultChannelId:101 - -Dio.netty.machineId: 74:29:af:ff:fe:8b:c3:73 (auto-detected)
-2021-03-01 23:39:32,024 DEBUG [AsyncHttpClient-2-1] AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
-2021-03-01 23:39:32,024 DEBUG [AsyncHttpClient-2-1] AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
-2021-03-01 23:39:32,024 DEBUG [AsyncHttpClient-2-1] ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@5079b931
-2021-03-01 23:39:32,065 DEBUG [AsyncHttpClient-2-1] Recycler:102 - -Dio.netty.recycler.maxCapacityPerThread: 4096
-2021-03-01 23:39:32,067 DEBUG [AsyncHttpClient-2-1] Recycler:103 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
-2021-03-01 23:39:32,068 DEBUG [AsyncHttpClient-2-1] Recycler:104 - -Dio.netty.recycler.linkCapacity: 16
-2021-03-01 23:39:32,069 DEBUG [AsyncHttpClient-2-1] Recycler:105 - -Dio.netty.recycler.ratio: 8
-2021-03-01 23:39:32,069 DEBUG [AsyncHttpClient-2-1] Recycler:106 - -Dio.netty.recycler.delayedQueue.ratio: 8
-2021-03-01 23:39:33,807 DEBUG [main] ThreadLocalRandom:212 - -Dio.netty.initialSeedUniquifier: 0xca9134e02ff84648
-2021-03-01 23:39:36,342  INFO [main] LoginPageTest:40 - ****************************** starting test case *****************************************
-2021-03-01 23:39:36,343  INFO [main] LoginPageTest:41 - ****************************** loginPageTitleTest *****************************************
-2021-03-01 23:39:37,260  INFO [main] LoginPageTest:75 - ****************************** Browser is Closed *****************************************
-2021-03-01 23:39:37,267  INFO [main] LoginPageTest:30 - ******************************Starting test case execution************************
-2021-03-01 23:39:38,759 DEBUG [AsyncHttpClient-2-1] PoolThreadCache:224 - Freed 13 thread-local buffer(s) from thread: AsyncHttpClient-2-1
-2021-03-01 23:39:41,466  INFO [main] LoginPageTest:51 - ****************************** starting test case *****************************************
-2021-03-01 23:39:41,468  INFO [main] LoginPageTest:52 - ****************************** AdminAreaLogoTest *****************************************
-2021-03-01 23:39:42,299  INFO [main] LoginPageTest:75 - ****************************** Browser is Closed *****************************************
-2021-03-01 23:39:42,300  INFO [main] LoginPageTest:30 - ******************************Starting test case execution************************
-2021-03-01 23:39:43,693 DEBUG [AsyncHttpClient-6-1] PoolThreadCache:224 - Freed 15 thread-local buffer(s) from thread: AsyncHttpClient-6-1
-2021-03-01 23:39:46,532  INFO [main] LoginPageTest:63 - ****************************** starting test case *****************************************
-2021-03-01 23:39:46,533  INFO [main] LoginPageTest:64 - ****************************** loginTest *****************************************
-2021-03-01 23:39:58,353  INFO [main] LoginPageTest:75 - ****************************** Browser is Closed *****************************************
-2021-03-01 23:39:58,357  INFO [main] HomePageTest:34 - ******************************Starting test case execution************************
-2021-03-01 23:39:59,382 DEBUG [AsyncHttpClient-9-1] PoolThreadCache:224 - Freed 20 thread-local buffer(s) from thread: AsyncHttpClient-9-1
-2021-03-01 23:40:10,284  INFO [main] HomePageTest:47 - ****************************** starting test case *****************************************
-2021-03-01 23:40:10,284  INFO [main] HomePageTest:48 - ****************************** homePageTitleTest *****************************************
-2021-03-01 23:40:21,156  INFO [main] HomePageTest:86 - ****************************** Closing Browser*****************************************
-2021-03-01 23:40:21,158  INFO [main] HomePageTest:34 - ******************************Starting test case execution************************
-2021-03-01 23:40:22,628 DEBUG [AsyncHttpClient-12-1] PoolThreadCache:224 - Freed 20 thread-local buffer(s) from thread: AsyncHttpClient-12-1
-2021-03-01 23:40:32,918  INFO [main] HomePageTest:59 - ****************************** starting test case *****************************************
-2021-03-01 23:40:32,919  INFO [main] HomePageTest:60 - ****************************** clickOnCustomersMenuTest *****************************************
-2021-03-01 23:40:44,197  INFO [main] HomePageTest:86 - ****************************** Closing Browser*****************************************
-2021-03-01 23:40:44,199  INFO [main] HomePageTest:34 - ******************************Starting test case execution************************
-2021-03-01 23:40:45,666 DEBUG [AsyncHttpClient-15-1] PoolThreadCache:224 - Freed 22 thread-local buffer(s) from thread: AsyncHttpClient-15-1
-2021-03-01 23:40:55,037  INFO [main] HomePageTest:70 - ****************************** starting test case *****************************************
-2021-03-01 23:40:55,037  INFO [main] HomePageTest:71 - ****************************** clickOnCustomersMenuItemTest *****************************************
-2021-03-01 23:41:22,749  INFO [main] HomePageTest:86 - ****************************** Closing Browser*****************************************
-2021-03-01 23:41:22,752  INFO [main] CustomerPageTest:34 - ******************************Starting test case execution************************
-2021-03-01 23:41:24,170 DEBUG [AsyncHttpClient-18-1] PoolThreadCache:224 - Freed 22 thread-local buffer(s) from thread: AsyncHttpClient-18-1
-2021-03-01 23:41:32,119  INFO [main] CustomerPageTest:48 - ****************************** starting test case *****************************************
-2021-03-01 23:41:32,119  INFO [main] CustomerPageTest:49 - ****************************** CustomersPageTitleTest *****************************************
-2021-03-01 23:41:42,135  INFO [main] CustomerPageTest:81 - ****************************** Closing Browser*****************************************
-2021-03-01 23:41:43,030  INFO [main] CustomerPageTest:34 - ******************************Starting test case execution************************
-2021-03-01 23:41:44,370 DEBUG [AsyncHttpClient-21-1] PoolThreadCache:224 - Freed 22 thread-local buffer(s) from thread: AsyncHttpClient-21-1
-2021-03-01 23:41:54,500  INFO [main] CustomerPageTest:59 - ****************************** starting test case *****************************************
-2021-03-01 23:41:54,500  INFO [main] CustomerPageTest:60 - ****************************** CustomersPageLogoTest *****************************************
-2021-03-01 23:42:04,586  INFO [main] CustomerPageTest:81 - ****************************** Closing Browser*****************************************
-2021-03-01 23:42:05,438  INFO [main] CustomerPageTest:34 - ******************************Starting test case execution************************
-2021-03-01 23:42:06,804 DEBUG [AsyncHttpClient-24-1] PoolThreadCache:224 - Freed 22 thread-local buffer(s) from thread: AsyncHttpClient-24-1
-2021-03-01 23:42:19,843  INFO [main] CustomerPageTest:59 - ****************************** starting test case *****************************************
-2021-03-01 23:42:19,843  INFO [main] CustomerPageTest:60 - ****************************** CustomersPageLogoTest *****************************************
-2021-03-01 23:42:29,910  INFO [main] CustomerPageTest:81 - ****************************** Closing Browser*****************************************
-2021-03-01 23:42:30,770  INFO [main] CustomerPageTest:34 - ******************************Starting test case execution************************
-2021-03-01 23:42:32,254 DEBUG [AsyncHttpClient-27-1] PoolThreadCache:224 - Freed 22 thread-local buffer(s) from thread: AsyncHttpClient-27-1
-2021-03-01 23:42:43,477  INFO [main] CustomerPageTest:59 - ****************************** starting test case *****************************************
-2021-03-01 23:42:43,477  INFO [main] CustomerPageTest:60 - ****************************** CustomersPageLogoTest *****************************************
-2021-03-01 23:42:53,584  INFO [main] CustomerPageTest:81 - ****************************** Closing Browser*****************************************
-2021-03-01 23:42:54,502  INFO [main] CustomerPageTest:34 - ******************************Starting test case execution************************
-2021-03-01 23:42:55,795 DEBUG [AsyncHttpClient-30-1] PoolThreadCache:224 - Freed 22 thread-local buffer(s) from thread: AsyncHttpClient-30-1
-2021-03-01 23:43:07,512  INFO [main] CustomerPageTest:59 - ****************************** starting test case *****************************************
-2021-03-01 23:43:07,513  INFO [main] CustomerPageTest:60 - ****************************** CustomersPageLogoTest *****************************************
-2021-03-01 23:43:17,599  INFO [main] CustomerPageTest:81 - ****************************** Closing Browser*****************************************
-2021-03-01 23:43:18,355  INFO [main] CustomerPageTest:34 - ******************************Starting test case execution************************
-2021-03-01 23:43:19,705 DEBUG [AsyncHttpClient-33-1] PoolThreadCache:224 - Freed 22 thread-local buffer(s) from thread: AsyncHttpClient-33-1
-2021-03-01 23:43:29,923  INFO [main] CustomerPageTest:70 - ****************************** starting test case *****************************************
-2021-03-01 23:43:29,924  INFO [main] CustomerPageTest:71 - ****************************** clickOnAddNewCustomerTest *****************************************
-2021-03-01 23:43:46,600  INFO [main] CustomerPageTest:81 - ****************************** Closing Browser*****************************************
-2021-03-01 23:43:47,531  INFO [main] AddCustomersPageTest:92 - ****************************** starting Data Provider *****************************************
-2021-03-01 23:43:48,343  INFO [main] AddCustomersPageTest:42 - ******************************Starting test case execution************************
-2021-03-01 23:43:48,828 DEBUG [AsyncHttpClient-36-1] PoolThreadCache:224 - Freed 24 thread-local buffer(s) from thread: AsyncHttpClient-36-1
-2021-03-01 23:44:20,841 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
-2021-03-01 23:44:20,845 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
-2021-03-01 23:44:20,852 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
-2021-03-01 23:44:20,856 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
-2021-03-01 23:44:20,857 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/InTel/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
-2021-03-01 23:44:21,428 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
-2021-03-01 23:44:21,429 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
-2021-03-01 23:44:21,429 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
-2021-03-01 23:44:21,430 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
-2021-03-01 23:44:21,430 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/InTel/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+2021-03-05 22:34:45,558 DEBUG [main] PlatformDependent0:403 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2021-03-05 22:34:45,559 DEBUG [main] PlatformDependent:1079 - sun.misc.Unsafe: available
+2021-03-05 22:34:45,567 DEBUG [main] PlatformDependent:1181 - maxDirectMemory: 536870912 bytes (maybe)
+2021-03-05 22:34:45,568 DEBUG [main] PlatformDependent:1200 - -Dio.netty.tmpdir: C:\Users\InTel\AppData\Local\Temp (java.io.tmpdir)
+2021-03-05 22:34:45,569 DEBUG [main] PlatformDependent:1279 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2021-03-05 22:34:45,574 DEBUG [main] PlatformDependent:177 - -Dio.netty.maxDirectMemory: -1 bytes
+2021-03-05 22:34:45,577 DEBUG [main] PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2021-03-05 22:34:45,581 DEBUG [main] CleanerJava9:71 - java.nio.ByteBuffer.cleaner(): available
+2021-03-05 22:34:45,582 DEBUG [main] PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2021-03-05 22:34:45,662 DEBUG [main] PlatformDependent:940 - org.jctools-core.MpscChunkedArrayQueue: available
+2021-03-05 22:34:45,896 DEBUG [main] InternalThreadLocalMap:83 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2021-03-05 22:34:45,896 DEBUG [main] InternalThreadLocalMap:86 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2021-03-05 22:34:46,404 DEBUG [main] JdkSslContext:97 - Default protocols (JDK): [TLSv1.3, TLSv1.2, TLSv1.1, TLSv1] 
+2021-03-05 22:34:46,406 DEBUG [main] JdkSslContext:98 - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+2021-03-05 22:34:46,570 DEBUG [main] MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 8
+2021-03-05 22:34:46,620 DEBUG [main] NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2021-03-05 22:34:46,621 DEBUG [main] NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2021-03-05 22:34:46,851 DEBUG [main] PooledByteBufAllocator:154 - -Dio.netty.allocator.numHeapArenas: 5
+2021-03-05 22:34:46,852 DEBUG [main] PooledByteBufAllocator:155 - -Dio.netty.allocator.numDirectArenas: 5
+2021-03-05 22:34:46,852 DEBUG [main] PooledByteBufAllocator:157 - -Dio.netty.allocator.pageSize: 8192
+2021-03-05 22:34:46,853 DEBUG [main] PooledByteBufAllocator:162 - -Dio.netty.allocator.maxOrder: 11
+2021-03-05 22:34:46,853 DEBUG [main] PooledByteBufAllocator:166 - -Dio.netty.allocator.chunkSize: 16777216
+2021-03-05 22:34:46,854 DEBUG [main] PooledByteBufAllocator:167 - -Dio.netty.allocator.smallCacheSize: 256
+2021-03-05 22:34:46,856 DEBUG [main] PooledByteBufAllocator:168 - -Dio.netty.allocator.normalCacheSize: 64
+2021-03-05 22:34:46,857 DEBUG [main] PooledByteBufAllocator:169 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2021-03-05 22:34:46,857 DEBUG [main] PooledByteBufAllocator:170 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2021-03-05 22:34:46,858 DEBUG [main] PooledByteBufAllocator:171 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2021-03-05 22:34:46,859 DEBUG [main] PooledByteBufAllocator:172 - -Dio.netty.allocator.useCacheForAllThreads: true
+2021-03-05 22:34:46,860 DEBUG [main] PooledByteBufAllocator:173 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2021-03-05 22:34:46,924 DEBUG [main] ByteBufUtil:87 - -Dio.netty.allocator.type: pooled
+2021-03-05 22:34:46,925 DEBUG [main] ByteBufUtil:96 - -Dio.netty.threadLocalDirectBufferSize: 0
+2021-03-05 22:34:46,926 DEBUG [main] ByteBufUtil:99 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2021-03-05 22:34:48,697 DEBUG [Forwarding newSession on session null to remote] DefaultChannelId:79 - -Dio.netty.processId: 16168 (auto-detected)
+2021-03-05 22:34:48,703 DEBUG [Forwarding newSession on session null to remote] NetUtil:135 - -Djava.net.preferIPv4Stack: false
+2021-03-05 22:34:48,703 DEBUG [Forwarding newSession on session null to remote] NetUtil:136 - -Djava.net.preferIPv6Addresses: false
+2021-03-05 22:34:48,736 DEBUG [Forwarding newSession on session null to remote] NetUtilInitializations:129 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2021-03-05 22:34:48,739 DEBUG [Forwarding newSession on session null to remote] NetUtil:187 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2021-03-05 22:34:48,836 DEBUG [Forwarding newSession on session null to remote] DefaultChannelId:101 - -Dio.netty.machineId: 74:29:af:ff:fe:8b:c3:73 (auto-detected)
+2021-03-05 22:34:49,103 DEBUG [AsyncHttpClient-2-1] AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2021-03-05 22:34:49,103 DEBUG [AsyncHttpClient-2-1] AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2021-03-05 22:34:49,104 DEBUG [AsyncHttpClient-2-1] ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@61bcf99c
+2021-03-05 22:34:49,209 DEBUG [AsyncHttpClient-2-1] Recycler:102 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2021-03-05 22:34:49,210 DEBUG [AsyncHttpClient-2-1] Recycler:103 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2021-03-05 22:34:49,210 DEBUG [AsyncHttpClient-2-1] Recycler:104 - -Dio.netty.recycler.linkCapacity: 16
+2021-03-05 22:34:49,211 DEBUG [AsyncHttpClient-2-1] Recycler:105 - -Dio.netty.recycler.ratio: 8
+2021-03-05 22:34:49,211 DEBUG [AsyncHttpClient-2-1] Recycler:106 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2021-03-05 22:34:51,284 DEBUG [main] ThreadLocalRandom:212 - -Dio.netty.initialSeedUniquifier: 0x82b02fd16912e544
+2021-03-05 22:34:54,396  INFO [main] LoginPageTest:49 - ****************************** starting test case *****************************************
+2021-03-05 22:34:54,397  INFO [main] LoginPageTest:50 - ****************************** loginPageTitleTest *****************************************
+2021-03-05 22:34:55,384  INFO [main] LoginPageTest:84 - ****************************** Browser is Closed *****************************************
+2021-03-05 22:34:55,390  INFO [main] LoginPageTest:37 - ******************************Starting test case execution************************
+2021-03-05 22:34:56,867 DEBUG [AsyncHttpClient-2-1] PoolThreadCache:224 - Freed 13 thread-local buffer(s) from thread: AsyncHttpClient-2-1
+2021-03-05 22:34:59,824  INFO [main] LoginPageTest:60 - ****************************** starting test case *****************************************
+2021-03-05 22:34:59,827  INFO [main] LoginPageTest:61 - ****************************** AdminAreaLogoTest *****************************************
+2021-03-05 22:35:00,678  INFO [main] LoginPageTest:84 - ****************************** Browser is Closed *****************************************
+2021-03-05 22:35:00,685  INFO [main] LoginPageTest:37 - ******************************Starting test case execution************************
+2021-03-05 22:35:02,153 DEBUG [AsyncHttpClient-6-1] PoolThreadCache:224 - Freed 15 thread-local buffer(s) from thread: AsyncHttpClient-6-1
+2021-03-05 22:35:23,064  INFO [main] HomePageTest:38 - ******************************Starting test case execution************************
+2021-03-05 22:35:45,333  INFO [main] CustomerPageTest:37 - ******************************Starting test case execution************************
+2021-03-05 22:36:07,724  INFO [main] AddCustomersPageTest:95 - ****************************** starting Data Provider *****************************************
+2021-03-05 22:36:11,347  INFO [main] AddCustomersPageTest:45 - ******************************Starting test case execution************************
+2021-03-05 22:36:46,921 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2021-03-05 22:36:46,926 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2021-03-05 22:36:46,930 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2021-03-05 22:36:46,932 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2021-03-05 22:36:46,932 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/InTel/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2021-03-05 22:36:47,971 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2021-03-05 22:36:47,972 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2021-03-05 22:36:47,973 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2021-03-05 22:36:47,974 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2021-03-05 22:36:47,975 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/InTel/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
